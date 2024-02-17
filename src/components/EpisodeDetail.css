@@ -1,0 +1,148 @@
+#player {
+    background-color: black;
+    overflow: hidden;
+}
+
+#barName,
+#barPlay,
+#barProgress {
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    width: 90%;
+    left: 5%;
+    align-items: center;
+}
+
+#barName {
+    top: 5%;
+    justify-content: space-between;
+}
+
+#barName div {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#barName p {
+    color: #fff;
+    font-size: 30px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+#barPlay {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-evenly;
+}
+
+#barProgress {
+    top: 94%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#barProgress div{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.volumeProgress,
+.progress {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
+    border-radius: 5px;
+    outline: none;
+}
+
+.volumeProgress {
+    width: 8em;
+    height: 0.5em;
+    background-color: #fff;
+}
+
+.volumeProgress::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+}
+
+.volumeProgress::-ms-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+}
+
+.volumeProgress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.progress {
+    width: 80%;
+    height: 0.5em;
+    background-color: #fff;
+    transition: ease 0.3s;
+}
+
+.progress::-moz-range-thumb,
+.progress::-ms-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ff9432;
+    border: none;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ff9432;
+}
+
+.progress::-webkit-slider-thumb:hover {
+    width: 20px;
+    height: 20px;
+}
+
+.buttons {
+    display: flex;
+    z-index: 9999;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    color: #ff9432;
+    font-size: 45px;
+    transition: ease 0.3s;
+}
+
+.buttons:hover {
+    color: white;
+    transform: scale(1.2);
+    background-color: transparent;
+}
+
+@media screen and (max-width: 778px) {
+    .nameEpisode {
+        font-size: 20px;
+        width: 70%;
+    }
+}
